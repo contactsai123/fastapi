@@ -10,7 +10,7 @@ def home():
     return {"message":"Hello TutLinks.com"}
 
 @app.get("/query")
-def home():
+def func1():
     return [
   {
     "target":"upper_75", // The field being queried for
