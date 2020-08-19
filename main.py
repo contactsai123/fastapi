@@ -9,6 +9,6 @@ app = FastAPI()
 def home():
     return {"message":"Hello TutLinks.com"}
 
-@app.route('/query/')
+@app.get('/query/')
 def func1():
        return {"message":"Hello from query path"}
