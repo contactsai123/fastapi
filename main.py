@@ -2,7 +2,14 @@ from fastapi import FastAPI
 from flask import Flask, request, jsonify, json, abort
 from flask_cors import CORS, cross_origin
 
+import pandas as pd
+
 app = FastAPI()
+
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
+
 
 #domain where this api is hosted for example : localhost:5000/docs to see swagger documentation automagically generated.
 
