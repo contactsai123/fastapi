@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from flask import Flask, request, jsonify, json, abort
+from flask_cors import CORS, cross_origin
 
 app = FastAPI()
 
@@ -6,10 +8,12 @@ app = FastAPI()
 
 
 @app.get("/")
+@cross_origin()
 def home():
     return {"message":"Hello TutLinks.com"}
 
 @app.get("/query")
+@cross_origin()
 def func1():
     return [
   {
@@ -27,5 +31,6 @@ def func1():
   }
 ]
 @app.get("/search")
+@cross_origin()
 def func2():
     return ["Active Memory (MB)","Inactive Memory (MB)","CPU Utilization (%)","Disk I/O Utilization (IOPS)"]
