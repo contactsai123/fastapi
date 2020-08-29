@@ -1,9 +1,11 @@
-from flask import Flask
-from flask_cors import CORS
+import flask
 
-app = Flask(__name__)
-CORS(app)
+app = flask.Flask(__name__)
+app.config["DEBUG"] = True
 
-@app.route("/")
-def helloWorld():
-  return "Hello, cross-origin-world!"
+
+@app.route('/', methods=['GET'])
+def home():
+    return "<h1>Distant Reading Archive</h1><p>This site is a prototype API for distant reading of science fiction novels.</p>"
+
+app.run()
