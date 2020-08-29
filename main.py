@@ -1,6 +1,4 @@
 from fastapi import FastAPI
-from flask import Flask
-from flask_cors import CORS
 
 app = FastAPI()
 
@@ -8,6 +6,5 @@ app = FastAPI()
 
 
 @app.get("/")
-@cross_origin()
 def home():
     return {"message":"Hello TutLinks.com"}
