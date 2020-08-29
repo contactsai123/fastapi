@@ -11,8 +11,7 @@ def home():
 
 @app.get("/query")
 def func1():
-    return [
-  {
+    return {
     "target": "Active Memory (MB)",
     "datapoints": [
       [
@@ -352,7 +351,6 @@ def func1():
       ]
     ]
   }
-]
 
 @app.get("/search")
 def func2():
