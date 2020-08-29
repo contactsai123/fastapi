@@ -1,13 +1,9 @@
-from fastapi import FastAPI
 from flask import Flask
 from flask_cors import CORS
 
-app = FastAPI()
+app = Flask(__name__)
 CORS(app)
 
-#domain where this api is hosted for example : localhost:5000/docs to see swagger documentation automagically generated.
-
-
-@app.get("/")
-def home():
-    return {"message":"Hello TutLinks.com"}
+@app.route("/")
+def helloWorld():
+  return "Hello, cross-origin-world!"
