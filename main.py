@@ -8,5 +8,6 @@ app = FastAPI()
 
 
 @app.get("/")
+@cross_origin()
 def home():
     return {"message":"Hello TutLinks.com"}
